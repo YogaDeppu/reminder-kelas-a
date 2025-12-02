@@ -15,10 +15,10 @@ jobs:
     steps:
       - name: Trigger CRON on InfinityFree
         run: |
-          curl -X GET "https://tria.page.gd/cron_reminder.php?db=if0_40384686_sql_triq"
+          curl -X GET "https://tria.page.gd/cron_reminder.php?token=TriA2024Secure!"
           echo "CRON triggered at $(date)"
       
       - name: Check Response
         run: |
-          response=$(curl -s "https://tria.page.gd/cron_reminder.php?db=if0_40384686_sql_triq")
+          response=$(curl -s "https://tria.page.gd/cron_reminder.php?token=TriA2024Secure!")
           echo "Response: $response"
