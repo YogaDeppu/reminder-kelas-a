@@ -16,5 +16,5 @@ jobs:
     - name: Hit URL
       run: |
         echo "Running cron job at $(date)"
-        curl -X GET "https://tria.page.gd/cron_reminder.php"
+        curl -X GET "https://tria.page.gd/cron_reminder.php?token=ibetyung"
         echo "Cron job completed!"
