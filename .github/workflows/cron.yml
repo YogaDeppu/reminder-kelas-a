@@ -3,7 +3,7 @@ name: Cron Job Auto
 on:
   schedule:
     # Jalankan setiap 1 jam (ubah sesuai kebutuhan)
-    - cron: '0 * * * *'
+    - cron: ''*/5 * * * *''
   
   # Bisa juga dijalankan manual
   workflow_dispatch:
