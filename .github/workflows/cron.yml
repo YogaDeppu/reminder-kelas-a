@@ -1,0 +1,20 @@
+name: Cron Job Auto
+
+on:
+  schedule:
+    # Jalankan setiap 1 jam (ubah sesuai kebutuhan)
+    - cron: '0 * * * *'
+  
+  # Bisa juga dijalankan manual
+  workflow_dispatch:
+
+jobs:
+  cron-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Hit URL
+      run: |
+        echo "Running cron job at $(date)"
+        curl -X GET "https://tria.page.gd/cron_reminder.php"
+        echo "Cron job completed!"
